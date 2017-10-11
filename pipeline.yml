@@ -12,7 +12,7 @@ spec:
 kind: BuildConfig
 apiVersion: "v1"
 metadata:
-  name: dropwizard-example
+  name: dummy-service
 spec:
   source:
     git:
