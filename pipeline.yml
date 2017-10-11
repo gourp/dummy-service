@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: "m2repo"
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 1Gi
+
+kind: BuildConfig
+apiVersion: "v1"
+metadata:
+  name: dropwizard-example
+spec:
+  source:
+    git:
+      uri: "https://github.com/gourp/dummy-service"
+  strategy:
+    jenkinsPipelineStrategy:
+      jenkinsfilePath: Jenkinsfile
