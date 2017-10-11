@@ -6,6 +6,6 @@ COPY application.yaml application.yaml
 
 CMD ["java","-jar","sample-1.0-SNAPSHOT.jar","server","application.yaml"]
 
-EXPOSE 9000 9001
+EXPOSE 9000:9000 9001:9001
 
 
